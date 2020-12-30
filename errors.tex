@@ -1,0 +1,22 @@
+\documentclass[letterpaper, 10pt]{article}
+\usepackage{amsmath, amsthm, amssymb}
+\usepackage{mathtools}
+\usepackage{enumitem}
+\usepackage{listings}
+
+\lstset{language=C, keywordstyle={\bfseries}}
+\newcommand{\lin}[1]{\lstinline{#1}}
+\setlength\parindent{0pt}
+\setlength\parskip{5pt}
+
+\begin{document}
+\section{Error handling}
+Variable named \textbf{errno} stores error codes, which are defined in a header file \lstinline{<error.h>}. \lstinline{perror()} prints a string you pass to it,
+followed by a colon with space and then the textual representation of the current value of \lstinline{errno}. \lin{strerror()} return a string representation
+of current \lin{errno} value.
+
+Don't forget to output error messages to \lin{stderr} file stream.
+
+Exiting a program and setting exit status: \lin{EXIT_SUCCESS} on success and \lin{EXIT_FAILURE} on failure.
+
+\end{document}
